@@ -1,0 +1,136 @@
+
+
+
+<style>
+    .container{
+   text-align: center;
+    width: 90vw;
+    position: absolute;
+    z-index: 99999999;
+    top:0;
+    left:5vw;
+
+    }
+    .img{
+     display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top:10vh;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+    }
+
+
+
+
+
+
+
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 40vw;
+  margin:auto;
+  height:150px;
+  text-align: center;
+  display:flex;
+
+  background-color:#99ccff;
+}
+
+.title {
+  color: black;
+  font-size: 22px;
+}
+
+.title2 {
+  color: white;
+  font-size: 25px;
+}
+.dimg{
+width:10vw;
+height:100%;
+
+
+}
+.dis{
+width:35vw;
+}
+.fa {
+
+  font-size: 60px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color:#99ccff;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+.icons{
+postion:absolute;
+margin-top:40vh;
+}
+</style>
+<div class="container" >
+
+
+
+    <div class="proflipic">
+         <img src="{{dp}}" class="img"/>
+    </div>
+
+ <h1 class="title2">
+{{name}}
+
+</h1>
+
+    <div>
+
+        {% for l in links %}
+        <br/>
+    <div class="card">
+
+
+        <div class="dis">
+
+             <p class="title">{{l.title}}</p>
+             <p>{{l.des}}</p>
+
+
+        </div>
+        <div>
+                <a href={{l.url}}>
+               <img src={{l.thum}} alt="John" class="dimg" >
+                 </a>
+
+        </div>
+
+     </div>
+
+    {% endfor %}
+
+     </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="icons">
+
+   <!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook" style="font-size: 40px;"></a>
+<a href="#" class="fa fa-twitter" style="font-size: 40px;"></a>
+<a href="#" class="fa fa-instagram" style="font-size: 40px;"></a>
+<a href="#" class="fa fa-whatsapp" style="font-size: 40px;"></a>
+<a href="#" class="fa fa-phone" style="font-size: 40px;"></a>
+<a href="#" class="fa fa-youtube" style="font-size: 40px;"></a>
+    <a href="#" class="fa fa-linkedin" style="font-size: 40px;"></a>
+
+</div>
+
+
+
+</div>
