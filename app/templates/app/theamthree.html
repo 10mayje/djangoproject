@@ -31,7 +31,7 @@
      html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   overflow-x:hidden;
 
 
@@ -41,9 +41,9 @@
  </style>
 
 
-   <div id="screen">
+   <div id="screen" value='5' >
 
- <canvas id="world"></canvas>
+ <canvas id="world" ></canvas>
 
 </div>
  <div id="loading" style="display:none">
@@ -80,7 +80,8 @@
   PI_2 = 2 * Math.PI;
 
   canvas = document.getElementById("world");
-
+ var myVar = "{{count}}";
+ console.log(myVar);
   context = canvas.getContext("2d");
 
   window.w = 0;
@@ -89,7 +90,7 @@
   window.addEventListener('resize', resizeWindow, false);
   resizeWindow = function() {
     window.w = canvas.width = window.innerWidth;
-    return window.h = canvas.height = 1400;
+    return window.h = canvas.height = myVar*170+500;
   };
 
   window.addEventListener('resize', resizeWindow, false);

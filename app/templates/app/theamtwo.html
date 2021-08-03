@@ -31,8 +31,9 @@
 body {
     padding:0;
     margin:0;
-    overflow:hidden;
-	height: 600px;
+    overflow-x:hidden;
+	height: 100%;
+	width:100vw;
 }
 canvas {
     padding:0;
@@ -43,9 +44,11 @@ div.btnbg {
     left:0;
     top:0;
 }
+
  </style>
 
- <canvas id="sakura"></canvas>
+ <canvas id="sakura" style="width:100vw,
+overflow-x:hidden"></canvas>
 <div class="btnbg">
 </div>
 
@@ -1106,12 +1109,14 @@ function animate() {
 }
 
 function makeCanvasFullScreen(canvas) {
+ var myVar = "{{count}}";
     var b = document.body;
 	var d = document.documentElement;
 	fullw = Math.max(b.clientWidth , b.scrollWidth, d.scrollWidth, d.clientWidth);
-	fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight);
+	//fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight);
+	fullh=myVar*170+570;
 	canvas.width = fullw;
-	canvas.height = fullh;
+	canvas.height =myVar*170+570; //fullh;
 }
 
 window.addEventListener('load', function(e) {

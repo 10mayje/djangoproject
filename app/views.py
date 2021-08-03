@@ -29,7 +29,8 @@ def theam(request,username):
             'phone':data['phone'],
             'whatsapp':data['whatsapp'],
             'links':data['links'],
-            'count':len(data['links'])
+            'count':len(data['links']),
+
         }
         print(len(data['links']))
         if selectedteam == 0:
