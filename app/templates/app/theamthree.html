@@ -38,6 +38,10 @@
 
   background: #111;
 }
+#world{
+position:fixed;
+
+}
  </style>
 
 
@@ -47,7 +51,7 @@
 
 </div>
  <div id="loading" style="display:none">
-   <canvas id="canvas" style="position:absolute; top:0; left:0;"></canvas>
+   <canvas id="canvas" style="position:fixed; top:0; left:0;"></canvas>
 <div id="buffer" style="display:none;"></div>
  </div>
 
@@ -90,7 +94,7 @@
   window.addEventListener('resize', resizeWindow, false);
   resizeWindow = function() {
     window.w = canvas.width = window.innerWidth;
-    return window.h = canvas.height = myVar*170+500;
+    return window.h = canvas.height = window.innerHeight;
   };
 
   window.addEventListener('resize', resizeWindow, false);

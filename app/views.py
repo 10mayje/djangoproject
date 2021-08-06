@@ -33,14 +33,14 @@ def theam(request,username):
 
         }
         print(len(data['links']))
-        if selectedteam == 0:
+        if selectedteam == 1:
 
             return render(request, 'app/theamone.html',Data)
-        if selectedteam == 1:
-            return render(request, 'app/theamtwo.html',Data)
         if selectedteam == 2:
-            return render(request, 'app/theamthree.html',Data)
+            return render(request, 'app/theamtwo.html',Data)
         if selectedteam == 3:
+            return render(request, 'app/theamthree.html',Data)
+        if selectedteam == 0:
             return render(request, 'app/theamfour.html',Data)
         else:
             return render(request, 'app/error.html', Data)

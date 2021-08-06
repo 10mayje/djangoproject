@@ -34,19 +34,22 @@
      canvas {
  width:100vw;
  overflow-x:hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
+
  </style>
  <canvas id=c style=" width:100vw;
  overflow-x:hidden;
  background-color:gray;"></canvas>
   {% include "app/error.html" %}
+
+
 <script>
  var myVar = "{{count}}";
     var w = c.width = window.innerWidth,
-    h = c.height = window.myVar*170+580,
+    h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
 
     opts = {

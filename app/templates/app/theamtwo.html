@@ -38,9 +38,10 @@ body {
 canvas {
     padding:0;
     margin:0;
+    positon:fixed!important;
 }
 div.btnbg {
-    position:fixed;
+    position:fixed!important;
     left:0;
     top:0;
 }
@@ -1113,10 +1114,10 @@ function makeCanvasFullScreen(canvas) {
     var b = document.body;
 	var d = document.documentElement;
 	fullw = Math.max(b.clientWidth , b.scrollWidth, d.scrollWidth, d.clientWidth);
-	//fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight);
-	fullh=myVar*170+570;
+	fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight);
+	//fullh=myVar*170+570;
 	canvas.width = fullw;
-	canvas.height =myVar*170+570; //fullh;
+	canvas.height =fullh+10;
 }
 
 window.addEventListener('load', function(e) {
