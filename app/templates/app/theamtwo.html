@@ -26,7 +26,7 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body >
  <style>
 body {
     padding:0;
@@ -34,6 +34,7 @@ body {
     overflow-x:hidden;
 	height: 100%;
 	width:100vw;
+	background-color:black;
 }
 canvas {
     padding:0;
@@ -48,14 +49,14 @@ div.btnbg {
 
  </style>
 
- <canvas id="sakura" style="width:100vw,
-overflow-x:hidden"></canvas>
+ <canvas id="sakura" ></canvas>
 <div class="btnbg">
 </div>
 
   {% include "app/error.html" %}
 
 <!-- sakura shader -->
+
 <script id="sakura_point_vsh" type="x-shader/x_vertex">
 uniform mat4 uProjection;
 uniform mat4 uModelview;
@@ -1114,10 +1115,10 @@ function makeCanvasFullScreen(canvas) {
     var b = document.body;
 	var d = document.documentElement;
 	fullw = Math.max(b.clientWidth , b.scrollWidth, d.scrollWidth, d.clientWidth);
-	fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight);
+	fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight)-20;
 	//fullh=myVar*170+570;
 	canvas.width = fullw;
-	canvas.height =fullh+10;
+	canvas.height =fullh;
 }
 
 window.addEventListener('load', function(e) {

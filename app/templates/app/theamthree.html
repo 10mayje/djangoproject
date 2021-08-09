@@ -31,7 +31,7 @@
      html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
   overflow-x:hidden;
 
 
@@ -50,10 +50,8 @@ position:fixed;
  <canvas id="world" ></canvas>
 
 </div>
- <div id="loading" style="display:none">
-   <canvas id="canvas" style="position:fixed; top:0; left:0;"></canvas>
-<div id="buffer" style="display:none;"></div>
- </div>
+
+
 
  {% include "app/error.html" %}
 
@@ -65,14 +63,7 @@ position:fixed;
 
 
 
-<script>
-  var load=document.getElementById("loading");
 
-  function loadfun()
-  {
-  load.style.display='none';
-  }
-</script>
 <script>
 (function() {
   var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;

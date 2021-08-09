@@ -4,7 +4,6 @@
     <list default="true" id="a6090d5e-ff4d-4554-bd74-1fa5ef1651c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/app/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/app/theamfour.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/theamfour.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/app/theamone.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/theamone.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/app/theamthree.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/theamthree.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/app/theamtwo.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/app/theamtwo.html" afterDir="false" />
