@@ -13,16 +13,15 @@
     }
     .img{
      display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-top:10vh;
-
+  margin-top:5vh;
+  background-position: center center;
+  background-repeat: no-repeat;
   border: 2px solid #cddc39;
   filter: drop-shadow(0 0 8px #ff5722);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+background-image: url({{dp}});
     }
 
 
@@ -30,7 +29,7 @@
 
 .card2 {
 
-  max-width: 40vw;
+  width: auto;
   margin:auto;
 
   text-align: center;
@@ -63,7 +62,7 @@ font-style: oblique;
 
 .title2 {
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   font-style: oblique;
 }
 .dimg{
@@ -71,7 +70,7 @@ width:10vw;
 margin-top:1vh;
 margin-right:1vh;
 
-height:15vh;
+height:12vh;
   border-radius:10px;
   text-align: center;
 
@@ -83,11 +82,14 @@ width:35vw;
 .fa2{
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
   border-radius:10px;
-background-image: linear-gradient(#CAF0F2, #F2F2CA );
-  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.3);
- display:flex;
- width:50vw!important;
- margin-top:1vh;
+
+ width:85vw!important;
+ text-align: center;
+ margin-top:3vh;
+ padding: 3%;
+ text-decoration: none;
+  color:#99ccff;
+  border: 2px solid;
 
 }
 .fa {
@@ -107,43 +109,59 @@ border:2px
   opacity: 0.7;
 }
 .icons{
-margin-top:10vh;
+  margin-top: 4vh;
 }
 .icons2{
 display:block;
-margin-top:20vh;
+margin-top:0vh;
 padding:1vh;
 }
 .footer {
 
   width: 100vw;
-  background-color: #1a1a1b;
+ 
   color: white;
   height:50px;
   z-index:999999;
+  
+  margin-top: -2vh;
   margin-left:-5vw;
 
 }
-
+.footer p{
+  padding-top:1vh;
+}
+.box{
+  min-height: 80vh;
+}
 @media only screen and (max-width: 600px) {
  .card {
 
-  max-width: 70vw;
+  max-width: 90vw;
 
   height:auto;
 
 }
 .title{
 font-size:16px;
+text-align: left;
+padding: 5%;
+font-weight: bold;
+margin-top: 0;
 }
 .dis{
-width:50vw;
+width:75vw;
 }
 .tdis{
 font-size: 12px;
+margin-top: -5vh;
+padding: 5%;
+
+text-align: left;
 }
 .dimg{
-width:20vw;
+width:25vw;
+
 }
 
 }
@@ -151,7 +169,7 @@ width:20vw;
 <div class="container" >
 
 
-
+<div class="box">
     <div class="proflipic">
          <img src="{{dp}}" class="img"/>
     </div>
@@ -160,72 +178,81 @@ width:20vw;
 {{name}}
 
 </h1>
-
+  
     <div>
 
-        {% for l in links %}
-        <br/>
-    <div class="card">
+      {% for l in links %}
+      <br/>
+  <div class="card">
 
 
-        <div class="dis">
-            <div class="block">
-                <p class="title"><b>Title </b>{{l.title}}</p>
-            </div>
+      <div class="dis">
+          <div class="block">
+              <p class="title">{{l.title}}</p>
+          </div>
 
 
-             <p class="tdis"> {{l.des}}</p>
+           <p class="tdis"> {{l.des}}</p>
 
 
-        </div>
-        <div>
-                <a href={{l.url}}>
-               <img src={{l.thum}} alt="John" class="dimg" >
-                 </a>
+      </div>
+      <div>
+              <a href={{l.url}}>
+             <img src={{l.thum}} alt="John" class="dimg" >
+               </a>
 
-        </div>
+      </div>
 
-     </div>
+   </div>
 
-    {% endfor %}
+  {% endfor %}
 
-     </div>
+   </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-   <!-- Add font awesome icons -->
+ <!-- Add font awesome icons -->
 {% if count == 0 %}
-    <div class="icons2">
+  <div class="icons2">
 
-        <div class="card2">
-            <a href={{fb}} class="fa fa2 fa-facebook" style="font-size: 30px;">{% if fb  %} Facebook {%endif%}</a>
-        </div>
+      <div class="card2">
+          <a href={{fb}} class=" fa2 " style="font-size: 30px;">{% if fb  %} Facebook {%endif%}</a>
+      </div>
 
 <div class="card2">
- <a href={{twitter}} class="fa fa2 fa-twitter" style="font-size: 30px;"> {%if twitter %} Twitter {%endif%}</a>
+<a href={{twitter}} class=" fa2 " style="font-size: 30px;"> {%if twitter %} Twitter {%endif%}</a>
 </div>
 <div class="card2">
-  <a href={{insta}} class="fa fa2 fa-instagram" style="font-size: 30px;">{%if insta %} Instragram {%endif%}</a>
+<a href={{insta}} class=" fa2 " style="font-size: 30px;">{%if insta %} Instragram {%endif%}</a>
 </div>
 <div class="card2">
-    <a href={{whatsapp}} class="fa fa2 fa-whatsapp" style="font-size: 30px;"> {%if whatsapp %} Whatsapp {%endif%}</a>
+  <a href={{whatsapp}} class="fa2 " style="font-size: 30px;"> {%if whatsapp %} Whatsapp {%endif%}</a>
 </div >
 <div class="card2">
-    <a href={{phone}} class="fa fa2 fa-phone" style="font-size: 30px;"> {%if phone %} Phone {%endif%}</a>
+  <a href={{phone}} class=" fa2 " style="font-size: 30px;"> {%if phone %} Phone {%endif%}</a>
 </div>
 <div class="card2">
-   <a href={{youtube}} class="fa fa2 fa-youtube" style="font-size: 30px;"> {%if youtube %} Youtube {%endif%}</a>
+ <a href={{youtube}} class="fa2 " style="font-size: 30px;"> {%if youtube %} Youtube {%endif%}</a>
 </div>
 <div class="card2">
-    <a href={{linkedin}} class="fa fa2 fa-linkedin" style="font-size: 30px;"> {%if linkedin %} Linkedin {%endif%} </a>
+  <a href={{linkedin}} class=" fa2 " style="font-size: 30px;"> {%if linkedin %} Linkedin {%endif%} </a>
 </div>
 
 
-    </div>
-    {% else %}
-    <div class="icons">
-    <a href={{fb}} class="fa fa-facebook" style="font-size: 30px;"></a>
+  </div>
+  {% endif %}
+ 
+
+
+
+
+
+
+  </div>
+  {% if count > 0 %}
+     <div class="icons">
+  <a href={{fb}} class="fa fa-facebook" style="font-size: 30px;"></a>
 
 
 
@@ -234,14 +261,21 @@ width:20vw;
 <a href={{whatsapp}} class="fa fa-whatsapp" style="font-size: 30px;"></a>
 <a href={{phone}} class="fa fa-phone" style="font-size: 30px;"></a>
 <a href={{youtube}} class="fa fa-youtube" style="font-size: 30px;"></a>
-    <a href={{linkedin}} class="fa fa-linkedin" style="font-size: 30px;"></a>
+  <a href={{linkedin}} class="fa fa-linkedin" style="font-size: 30px;"></a>
 
 </div>
- {% endif %}
-
-
+{% endif %}
+{% if count == 0%}
+<div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</div>
+{% endif %}
 <div class="footer">
-    <p>Made with ❤️ by {{username}}</p>
+    <p>Made with ❤️ by {{name}}</p>
 </div>
 </div>
 

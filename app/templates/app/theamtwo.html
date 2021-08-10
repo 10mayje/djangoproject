@@ -1115,7 +1115,7 @@ function makeCanvasFullScreen(canvas) {
     var b = document.body;
 	var d = document.documentElement;
 	fullw = Math.max(b.clientWidth , b.scrollWidth, d.scrollWidth, d.clientWidth);
-	fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight)-20;
+	fullh = Math.max(b.clientHeight , b.scrollHeight, d.scrollHeight, d.clientHeight);
 	//fullh=myVar*170+570;
 	canvas.width = fullw;
 	canvas.height =fullh;
