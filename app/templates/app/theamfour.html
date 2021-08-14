@@ -30,7 +30,7 @@
  <style>
      html,
 body {
-  max-height: calc(550px + {{count}}*170px);
+  max-height:auto;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -41,6 +41,169 @@ body {
   width: 100%;
   height: 100%;
   position:fixed!important;
+}
+.container{
+   text-align: center;
+    width: 90vw;
+    position: absolute;
+    z-index: 99999999;
+    top:0;
+    left:5vw;
+
+    }
+    .img{
+     display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-top:5vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+background-image: url({{dp}});
+    }
+
+
+
+
+.card2 {
+
+  width: auto;
+  margin:auto;
+
+  text-align: center;
+  display:flex;
+
+
+}
+
+
+
+.card {
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.3);
+  max-width: 40vw;
+  margin:auto;
+  height:auto;
+  text-align: center;
+  display:flex;
+
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+  border-radius:10px;
+background-color: #2f3a53;
+
+}
+
+.title {
+  color:white;
+  font-size: 20px;
+font-style: oblique;
+}
+
+.title2 {
+  color: white;
+  font-size: 30px;
+  font-style: normal;
+}
+.dimg{
+width:10vw;
+margin-top:1vh;
+margin-right:1vh;
+
+height:12vh;
+  border-radius:10px;
+  text-align: center;
+
+
+}
+.dis{
+width:35vw;
+color: white;
+}
+.fa2{
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.3));
+  border-radius:10px;
+
+ width:85vw!important;
+ text-align: center;
+ margin-top:3vh;
+ padding: 3%;
+ text-decoration: none;
+  color:#99ccff;
+  border: 2px solid;
+
+}
+.fa {
+display:flex;
+  font-size: 60px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  color:#717aa3;
+  padding-top:3vh;
+}
+.block{
+border:2px
+}
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+.icons{
+  margin-top: 4vh;
+}
+.icons2{
+display:block;
+margin-top:0vh;
+padding:1vh;
+}
+.footer {
+
+  width: 100vw;
+ 
+  color: white;
+  height:50px;
+  z-index:999999;
+  
+  margin-top: -2vh;
+  margin-left:-5vw;
+
+}
+.footer p{
+  padding-top:1vh;
+}
+.box{
+  min-height: 80vh;
+}
+@media only screen and (max-width: 600px) {
+ .card {
+
+  max-width: 90vw;
+
+  height:auto;
+
+}
+.title{
+font-size:16px;
+text-align: left;
+padding: 5%;
+font-weight: bold;
+margin-top: 0;
+}
+.dis{
+width:75vw;
+}
+.tdis{
+font-size: 12px;
+margin-top: -5vh;
+padding: 5%;
+
+text-align: left;
+}
+.dimg{
+width:25vw;
+
+}
+
 }
  </style>
 <div id="particle-canvas" ></div>
