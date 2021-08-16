@@ -6,6 +6,8 @@ import requests
 def index(request):
 
     return render(request, 'app/home.html')
+def policy(request):
+    return render(request,'app/privecy_policy.html')    
 
 def theam(request,username):
 
