@@ -2,7 +2,14 @@
 
 
 <style>
-   
+   .title{
+     text-align: left;
+     margin: 10px;
+   }
+   .tdis{
+  text-align: left;
+  margin: 10px;
+   }
 </style>
 <div class="container" >
 
@@ -24,6 +31,7 @@
 
       {% for l in links %}
       <br/>
+      <a href={{l.url}} style="text-decoration: none;">
   <div class="card">
 
 
@@ -38,13 +46,13 @@
 
       </div>
       <div>
-              <a href={{l.url}}>
+              
              <img src={{l.thum}} alt="John" class="dimg" >
-               </a>
 
       </div>
 
    </div>
+   </a>
 
   {% endfor %}
 
@@ -68,10 +76,10 @@
 <a href={{insta}} class=" fa2 " style="font-size: 30px;">{%if insta %} Instragram {%endif%}</a>
 </div>
 <div class="card2">
-  <a href={{whatsapp}} class="fa2 " style="font-size: 30px;"> {%if whatsapp %} Whatsapp {%endif%}</a>
+  <a href="https://wa.me/91{{whatsapp}}" class="fa2 " style="font-size: 30px;"> {%if whatsapp %} Whatsapp {%endif%}</a>
 </div >
-<div class="card2">
-  <a href={{phone}} class=" fa2 " style="font-size: 30px;"> {%if phone %} Phone {%endif%}</a>
+<div class="card2">"
+  <a href="tel:91{{phone}}" class=" fa2 " style="font-size: 30px;"> {%if phone %} Phone {%endif%}</a>
 </div>
 <div class="card2">
  <a href={{youtube}} class="fa2 " style="font-size: 30px;"> {%if youtube %} Youtube {%endif%}</a>
@@ -99,8 +107,8 @@
 
 <a href={{twitter}} class="fa fa-twitter" style="font-size: 30px;"></a>
 <a href={{insta}} class="fa fa-instagram" style="font-size: 30px;"></a>
-<a href={{whatsapp}} class="fa fa-whatsapp" style="font-size: 30px;"></a>
-<a href={{phone}} class="fa fa-phone" style="font-size: 30px;"></a>
+<a href="https://wa.me/91{{whatsapp}}" class="fa fa-whatsapp" style="font-size: 30px;"></a>
+<a href="tel:91{{phone}}" class="fa fa-phone" style="font-size: 30px;"></a>
 <a href={{youtube}} class="fa fa-youtube" style="font-size: 30px;"></a>
   <a href={{linkedin}} class="fa fa-linkedin" style="font-size: 30px;"></a>
 
